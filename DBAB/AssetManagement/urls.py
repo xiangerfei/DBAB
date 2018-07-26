@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-import xadmin
+from views import index,ajax_check
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-	url(r'^xadmin/', xadmin.site.urls)
-	url(r'^index',  )
+	url(r'^ajax_check', ajax_check),
+    url(r'index', index),
 ]
