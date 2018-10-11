@@ -15,12 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from views import index,ajax_check
+from views import *
 
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^ajax_check', ajax_check),
+	url(r'check_vaild', check_vaild),
+	url(r'^ajax_post_save', ajax_post_save),
     url(r'index', index),
+	url(r'^boots/(\d+)$', boots),
+	url(r'add_mashine', add_mashine),
+	url(r'add_backup', backupData)
 ]
